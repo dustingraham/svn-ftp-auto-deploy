@@ -17,5 +17,8 @@ return array(
     'pass' => '',
 	
     // Logging
-    'verbose' => false
+    'verbose' => false,
+    
+    // Mode
+    'debug' => false
 );

@@ -21,7 +21,11 @@ $ftp = new Ftp($fs, $config);
 $rVer = $ftp->getCurrentVersion();
 $sVer = $svn->getCurrentVersion();
 
-//var_dump($rVer, $sVer, $config);exit;
+if ($config['debug'])
+{
+    var_dump($rVer, $sVer, $config);
+	exit;
+}
 
 if ($sVer > $rVer)
 {
