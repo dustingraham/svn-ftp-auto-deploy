@@ -60,7 +60,7 @@ class Ftp
         
 	    $data = file_get_contents($temp.$this->config['version_file']);
         
-        $this->log('Data: ' . $data);
+        $this->log('FTP Version: ' . $data);
 	    
         return $data;
     }
@@ -99,6 +99,9 @@ class Ftp
             // upload the file
             //$upload = false;
             //$upload = ftp_put($conn_id, $destination, $source, FTP_ASCII);
+			$this->log('Source: '.$source);
+			$this->log('Destination: '.$source);
+			
             $upload = ftp_put($conn_id, $destination, $source, FTP_BINARY); 
             
             //var_dump($upload, $change, $destination, $source);
